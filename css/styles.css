@@ -20,8 +20,19 @@
     padding: 20px 0px;
     margin: 0px auto;
 }
-.adress{
+address{
     font-size: 80%;
     margin: 0px;
     font-size: #0F0F0F;
+}
+body{
+    padding: 50px 0px 0px 0px;
+    z-index: 0;
+}
+.navbar-dark{
+    background-color: #512DA8;
+}
+.breadcrumb{
+    padding: 15px;
+    border-radius: 5px;
 }
