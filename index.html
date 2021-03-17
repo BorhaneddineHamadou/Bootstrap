@@ -39,8 +39,11 @@
                     <h1>Ristorante con Fusion</h1>
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
-                <div class="col-12 col-sm align-self-center">
+                <div class="col-12 col-sm align-self-center mb-3">
                    <img src="img/logo.png" alt="logo" class="img-fluid">  
+                </div>
+                <div class="col-12 col-sm align-self-center">
+                    <a href="#reservation" role="button" class="btn btn-warning btn-block btn-sm">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -71,11 +74,12 @@
             </div>
             <div class="col col-sm col-md">
                 <div class="row align-items-center">
-                    <div class="col-4 col-md-3">
+                    <!-- I use bootstrap 5 and there is no media class so for that i align elements like a media object -->
+                    <div class="col-4 col-md-3 order-last">
                         <img src="img/buffet.png" alt="buffet" class="d-flex me-3 img-thumbnail align-self-center">
                     </div>
-                    <div class="col-8 col-md-9">
-                        <h2 class="mt-0">Weekend Grand Buffet</h2>
+                    <div class="col-8 col-md-9 order-first">
+                        <h2 class="mt-0">Weekend Grand Buffet <span class="badge bg-danger">NEW</span></h2>
                         <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
                     </div>
                 </div>
@@ -96,6 +100,63 @@
                         <h4>Executive Chef</h4>
                         <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row content-row mb-3 mt-3" id="reservation">
+            <div class="card col-sm-8 offset-sm-2 p-0">
+                <h2 class="card-header bg-warning text-white">Reserve a Table</h2>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group row mb-3">
+                            <div class="col-md-3">
+                                <label for="numberguests" class="col-form-label">Number of Guests</label>
+                            </div>
+                            <div class="col-md-9 align-self-center">
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" name="numberguests" id="option1">
+                                    <label for="option1" class="form-check-label">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" name="numberguests" id="option2">
+                                    <label for="option2" class="form-check-label">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" name="numberguests" id="option3">
+                                    <label for="option3" class="form-check-label">3</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" name="numberguests" id="option4">
+                                    <label for="option4" class="form-check-label">4</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" name="numberguests" id="option5">
+                                    <label for="option5" class="form-check-label">5</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" name="numberguests" id="option6">
+                                    <label for="option6" class="form-check-label">6</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row mb-3">
+                            <div class="col-md-3">
+                                <label for="datetime" class="col-form-label">Date and Time</label>
+                            </div>
+                            <div class="col-5 col-md-3 me-3">
+                                <input type="text" name="date" id="date" class="form-control me-3 col-4" placeholder="Date">
+                            </div>
+                            <div class="col-5 col-md-3 me-3">
+                                <input type="text" name="time" id="time" class="form-control me-3 col-4" placeholder="Time">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-9 offset-md-3">
+                                <button class="btn btn-primary" type="submit">Reserve</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
