@@ -28,10 +28,45 @@
                     <li class="nav-item"><a class="nav-link" href="aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
-                </ul>  
+                </ul>
+                <span class="navbar-text"><a data-bs-toggle="modal" style="text-decoration: none;" href="#loginModal">
+                    <i class="fa fa-sign-in"></i> Login
+                </a></span>  
             </div>
        </div> 
     </nav>
+
+    <div class="modal fade" id="loginModal" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+           <div class="modal-content">
+               <div class="modal-header">
+                   <h4 class="modal-title">Login</h4>
+                   <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+               </div>
+               <div class="modal-body">
+                  <form>
+                      <div class="row">
+                         <div class="form-group col-sm-4 mb-3 mb-sm-0">
+                             <input type="email" name="email" id="email" class="form-control" placeholder="Enter Email">
+                         </div>
+                         <div class="form-group col-sm-4 mb-3 mb-sm-0">
+                            <input type="password" name="password" id="password" class="form-control" placeholder="Enter password">
+                        </div>
+                        <div class="form-check col-sm-4 align-self-center ms-3 ms-sm-0">
+                            <input type="checkbox" class="form-check-input" id="checkbox">
+                            <label for="checkbox" class="form-check-label">Remember me</label>
+                        </div>
+                      </div>
+                  </form>
+               </div>
+               <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm ms-auto" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary btn-sm ms-1">Sign in</button>
+               </div>
+           </div>
+        </div>
+    </div>
+
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
@@ -43,7 +78,12 @@
                    <img src="img/logo.png" alt="logo" class="img-fluid">  
                 </div>
                 <div class="col-12 col-sm align-self-center">
-                    <a href="#reservation" role="button" class="btn btn-warning btn-sm">Reserve Table</a>
+                    <a 
+                    data-bs-toggle="tooltip" 
+                    data-bs-html="true" 
+                    title="Or Call Us at <br> <strong>+213658642732</strong>"
+                    data-bs-placement="Bottom" 
+                    href="#reservation" role="button" class="btn btn-warning btn-sm">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -206,7 +246,12 @@
 <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
 <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script>
+    $(document).ready(function(){
+        $('[data-bs-toggle="tooltip"]').tooltip();
+    });
+</script>
 </body>
 
 </html>
